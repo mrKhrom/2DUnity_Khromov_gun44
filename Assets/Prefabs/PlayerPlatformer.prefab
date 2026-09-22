@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1936001956928602372}
   - component: {fileID: 4053309689168353913}
   - component: {fileID: 3589303666903751543}
+  - component: {fileID: 7344551122003344551}
   m_Layer: 0
   m_Name: PlayerPlatformer
   m_TagString: Untagged
@@ -101,18 +102,18 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_GravityScale: 3
+  m_Material: {fileID: 6200000, guid: c16d5f90427e831f3a5b6c7d8e9f0123, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &3589303666903751543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,7 +123,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6908626253779658332}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c16d5f90427e831f3a5b6c7d8e9f0123, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -158,3 +159,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21469352, y: 0.24377823}
   m_EdgeRadius: 0
+--- !u!114 &7344551122003344551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6908626253779658332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3a2c6d1f4b508c0d2e3f4a5b6c7d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 6
+  jumpSpeed: 12
+  gravityScale: 3
+  groundCheckDistance: 0.08
+  minGroundNormalY: 0.5
+  coyoteTime: 0.1
+  jumpBufferTime: 0.1
+  fallGravityMultiplier: 1.8
+  lowJumpGravityMultiplier: 2.5
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
